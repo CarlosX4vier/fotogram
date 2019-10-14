@@ -1,11 +1,17 @@
-.bagulhoBranco{
-width: 100%;
-height: 207px;
-left: 0px;
-top: 0px;
-clip-path: url('http://localhost:8100/assets/header.svg');
+.header{
+    width: 100%;
+    height: 250px;
+    background: url('/assets/images/header.png');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
-background: #FFFFFF;
+.logo{
+    padding-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .container{
@@ -14,3 +20,14 @@ background: #FFFFFF;
     width: 100%;
 }
 
+.input-white{
+    width: 280px;
+    height: 56px;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+
+.item{
+    --background: transparent;
+}

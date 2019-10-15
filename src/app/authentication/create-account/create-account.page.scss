@@ -1,0 +1,26 @@
+.input-pink {
+    border: 1px solid rgba(183, 33, 255, 0.8);
+    box-sizing: border-box;
+    border-radius: 4px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    height: 56px;
+
+    --placeholder-color: rgba(183, 33, 255, 0.8);
+    --placeholder-font-style: rgba(183, 33, 255, 0.8);
+    --placeholder-font-weight: rgba(183, 33, 255, 0.8);
+    --placeholder-opacity: .8;
+    --padding-start: 16px !important;
+
+}
+
+.btn-pink {
+    color: #FFF;
+
+    width: 216px;
+    height: 46px;
+
+    background: #B721FF;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+}

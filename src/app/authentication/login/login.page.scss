@@ -1,4 +1,29 @@
-.header{
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    width: 160px;
+    height: 48px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25);
+    border-radius: 50px;
+    align-self: center;
+}
+
+span {
+    color: white;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: normal;
+}
+
+.logar {
+    margin-top: 36px;
+}
+
+.header {
     width: 100%;
     height: 250px;
     background: url('/assets/images/header.png');
@@ -7,27 +32,57 @@
     background-size: cover;
 }
 
-.logo{
-    padding-top: 40px;
+.logo {
+    padding-top: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.container{
+.container {
     background: linear-gradient(180deg, #C50058 0%, #B721FF 100%);
     height: 100%;
     width: 100%;
 }
 
-.input-white{
-    width: 280px;
-    height: 56px;
-    border: 1px solid rgba(255, 255, 255, 0.8);
-    box-sizing: border-box;
-    border-radius: 4px;
+.content {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
 }
 
-.item{
+.input-white {
+    height: 56px;
+    border: 0px solid rgba(255, 255, 255, 0.0);
+    --color: white;
+    --placeholder-opacity: 0.8;
+}
+
+.item {
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.8);
     --background: transparent;
+    --padding-start: 15px;
+    margin-top: 10px;
+}
+
+.item>ion-icon {
+    color: white;
+}
+
+.recuperarSenha {
+    color: white;
+    font-size: 12px;
+    align-self: flex-end;
+}
+
+.criarContaBox {
+    align-self: center;
+    margin-top: 87px;
+}
+
+.criarConta {
+    color: rgb(0, 0, 0, 0.6);
+    font-style: normal;
+    font-weight: normal;
 }

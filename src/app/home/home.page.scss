@@ -48,7 +48,7 @@ span {
 .card {
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25);
     width: 93%;
-    background: rgba(255, 255, 255);
+    background: rgb(240, 240, 240);
     align-self: center;
     padding: 16px;
     height: 36.5%;
@@ -61,4 +61,7 @@ span {
 .card>.avatar {
     background: #c4c4c4;
     border: 1px solid rgba(128, 0, 203, 1);
+    height: 52px;
+    margin-left: 0px;
+    width: 52px;
 }

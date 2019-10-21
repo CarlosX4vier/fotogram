@@ -1,5 +1,4 @@
 {
-  "name": "Fotogram",
-  "integrations": {},
-  "type": "angular"
+    "name": "Fotogram",
+    "type": "angular"
 }

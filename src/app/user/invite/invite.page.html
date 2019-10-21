@@ -1,19 +1,23 @@
 <header class="header">
-    <ion-button class="back" fill="clear">
-        <ion-icon name="arrow-round-back" slot="icon-only"></ion-icon>
-    </ion-button>
-    <ion-title class="title">
+    <ion-buttons slot="start">
+        <ion-back-button class="back" defaultHref="/settings" icon="arrow-round-back"></ion-back-button>
+    </ion-buttons>
+
+    <h1 class="title">
         <ion-icon name="mail"></ion-icon>
-        Configurações
-    </ion-title>
+        <ion-label>Convidar amigos</ion-label>
+    </h1>
 </header>
 
 <ion-content>
-    <!-- Item as a Button -->
-    <ion-item class="option" button="true" lines="none">
-        <ion-icon name="person-add"></ion-icon>
-        <ion-label>Convidar amigos</ion-label>
-    </ion-item>
+    <div class="content">
+        <form>
+            <ion-item class="item-input" button="true" lines="none">
+                <ion-icon name="person-add" class="icon-input"></ion-icon>
+                <ion-input placeholder="E-MAIL" type="email" class="input"></ion-input>
+            </ion-item>
 
-
+            <ion-button class="btn-invite" type="submit" fill="clear">Enviar convite</ion-button>
+        </form>
+    </div>
 </ion-content>

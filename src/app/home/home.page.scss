@@ -7,13 +7,15 @@ span {
     color: rgb(255, 255, 255);
 }
 
+ion-fab {
+    bottom: 10px;
+    right: 5px;
+}
+
 .content {
     width: 100%;
     min-height: 50%;
     overflow: auto;
-    //   display: flex;
-    //  justify-content: flex-start;
-    // flex-direction: column;
 }
 
 .header {

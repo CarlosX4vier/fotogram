@@ -1,0 +1,41 @@
+.header {
+    --background: linear-gradient(90deg, #C50058 0%, #B721FF 100%);
+    --padding-top: 16px;
+    --padding-bottom: 16px;
+    --color: #FFF;
+}
+
+.back {
+    width: 24px;
+    height: 24px;
+    --color: #FFF;
+    --background-activated: #B721FF;
+    --color-activated: #FFF;
+    float: left;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    // margin-left: 14px;
+}
+
+.option {
+    --background-activated: #EDEDED;
+    --color: #666666;
+}
+
+.option ion-icon {
+    margin-right: 8px;
+}
+
+.title-session {
+    margin-left: 16px;
+    --color: 222222;
+}
+
+.close {
+    --color: #FC4F83;
+    --color-activated: #FC4F83;
+    --background-activated: #EDEDED;
+}

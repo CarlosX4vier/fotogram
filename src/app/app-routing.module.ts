@@ -2,11 +2,8 @@ import { NgModule } from "@angular/core";
 import { PreloadAllModules, RouterModule, Routes } from "@angular/router";
 
 const routes: Routes = [
-  { path: "", redirectTo: "recover-password", pathMatch: "full" },
-  {
-    path: "home",
-    loadChildren: () => import("./home/home.module").then(m => m.HomePageModule)
-  },
+  { path: "", redirectTo: "login", pathMatch: "full" },
+  // { path: 'home', loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)},
   {
     path: "login",
     loadChildren: "./authentication/login/login.module#LoginPageModule"
@@ -20,9 +17,36 @@ const routes: Routes = [
     path: "recover-password",
     loadChildren:
       "./authentication/recover-password/recover-password.module#RecoverPasswordPageModule"
-  },  { path: 'my-profile', loadChildren: './profile/my-profile/my-profile.module#MyProfilePageModule' },
-  { path: 'profile', loadChildren: './profile/profile/profile.module#ProfilePageModule' }
-
+  },
+  {
+    path: "profile",
+    loadChildren: "./user/profile/profile.module#ProfilePageModule"
+  },
+  {
+    path: "settings",
+    loadChildren: "./user/settings/settings.module#SettingsPageModule"
+  },
+  {
+    path: "feed",
+    loadChildren: "./navigation/feed/feed.module#FeedPageModule"
+  },
+  {
+    path: "profile-user",
+    loadChildren:
+      "./navigation/profile-user/profile-user.module#ProfileUserPageModule"
+  },
+  {
+    path: "invite",
+    loadChildren: "./user/invite/invite.module#InvitePageModule"
+  },
+  {
+    path: "my-profile",
+    loadChildren: "./profile/my-profile/my-profile.module#MyProfilePageModule"
+  },
+  {
+    path: "profile",
+    loadChildren: "./profile/profile/profile.module#ProfilePageModule"
+  }
 ];
 
 @NgModule({

@@ -1,6 +1,7 @@
 form {
     display: flex;
     flex-direction: column;
+    width: 88%;
 }
 
 button {
@@ -21,6 +22,9 @@ span {
 
 .logar {
     margin-top: 36px;
+    color: #8000CB;
+    font-weight: bold;
+    font-size: 18px
 }
 
 .header {
@@ -33,7 +37,7 @@ span {
 }
 
 .logo {
-    padding-top: 30px;
+    padding-top: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -62,8 +66,10 @@ span {
     border-radius: 4px;
     border: 1px solid rgba(255, 255, 255, 0.8);
     --background: transparent;
-    --padding-start: 15px;
-    margin-top: 10px;
+    --padding-start: 16px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    width: 100%;
 }
 
 .item>ion-icon {
@@ -71,6 +77,7 @@ span {
 }
 
 .recuperarSenha {
+    margin-top: 8px;
     color: white;
     font-size: 12px;
     align-self: flex-end;
@@ -78,11 +85,13 @@ span {
 
 .criarContaBox {
     align-self: center;
-    margin-top: 87px;
+    position: fixed;
+    bottom: 0;
+    margin-bottom: 16px
 }
 
 .criarConta {
-    color: rgb(0, 0, 0, 0.6);
+    color: #EE61FF;
     font-style: normal;
     font-weight: normal;
 }

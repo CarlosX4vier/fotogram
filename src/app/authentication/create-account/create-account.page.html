@@ -1,26 +1,33 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>create-account</ion-title>
-  </ion-toolbar>
-</ion-header>
+<header class="header">
+    <ion-button class="back" fill="clear">
+        <ion-icon name="arrow-round-back" slot="icon-only"></ion-icon>
+    </ion-button>
+    <h1 class="title">Crie sua conta</h1>
+</header>
 
 <ion-content>
 
-  <ion-item lines="none">
-    <!-- Input with placeholder -->
-    <ion-input type="text" class="input-pink" placeholder="Name" required></ion-input>
-  </ion-item>
+    <div class="content">
+        <form>
 
-  <ion-item lines="none">
-    <!-- Input with placeholder -->
-    <ion-input type="email" class="input-pink" placeholder="E-mail" required></ion-input>
-  </ion-item>
+            <ion-item lines="none">
+                <!-- Input with placeholder -->
+                <ion-input type="text" class="input-pink" placeholder="Name" required></ion-input>
+            </ion-item>
 
-  <ion-item lines="none">
-    <!-- Input with placeholder -->
-    <ion-input type="password" class="input-pink" placeholder="Password" required></ion-input>
-  </ion-item>
+            <ion-item lines="none">
+                <!-- Input with placeholder -->
+                <ion-input type="email" class="input-pink" placeholder="E-mail" required></ion-input>
+            </ion-item>
 
-  <ion-button class="btn-pink" fill="clear">Cadastrar</ion-button>
+            <ion-item lines="none">
+                <!-- Input with placeholder -->
+                <ion-input type="password" class="input-pink" placeholder="Password" required></ion-input>
+            </ion-item>
+
+            <ion-button class="btn-pink" fill="clear">Cadastrar</ion-button>
+
+        </form>
+    </div>
 
 </ion-content>

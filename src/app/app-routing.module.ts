@@ -20,7 +20,8 @@ const routes: Routes = [
     path: "recover-password",
     loadChildren:
       "./authentication/recover-password/recover-password.module#RecoverPasswordPageModule"
-  },  { path: 'my-profile', loadChildren: './profile/my-profile/my-profile.module#MyProfilePageModule' }
+  },  { path: 'my-profile', loadChildren: './profile/my-profile/my-profile.module#MyProfilePageModule' },
+  { path: 'profile', loadChildren: './profile/profile/profile.module#ProfilePageModule' }
 
 ];
 

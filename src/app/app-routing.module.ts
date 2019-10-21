@@ -19,21 +19,12 @@ const routes: Routes = [
       "./authentication/recover-password/recover-password.module#RecoverPasswordPageModule"
   },
   {
-    path: "profile",
-    loadChildren: "./user/profile/profile.module#ProfilePageModule"
-  },
-  {
     path: "settings",
     loadChildren: "./user/settings/settings.module#SettingsPageModule"
   },
   {
     path: "feed",
     loadChildren: "./navigation/feed/feed.module#FeedPageModule"
-  },
-  {
-    path: "profile-user",
-    loadChildren:
-      "./navigation/profile-user/profile-user.module#ProfileUserPageModule"
   },
   {
     path: "invite",

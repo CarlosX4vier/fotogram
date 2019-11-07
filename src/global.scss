@@ -49,6 +49,25 @@
     --ion-color-tint: var(--ion-color-primary-tint);
 }
 
+/* HEADER */
+.header-ifr {
+    width: 100%;
+    height: 150px;
+    background: url('assets/images/ifr_top.svg');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.header-profiles {
+    padding-top: 0px;
+    background: url("assets/images/profiles_top.svg");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 35%;
+}
+
 /* Button BACK */
 .back {
     --color: #FFF;

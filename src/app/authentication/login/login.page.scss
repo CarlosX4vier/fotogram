@@ -1,18 +1,17 @@
 form {
-    display: flex;
-    flex-direction: column;
-    width: 88%;
+    // display: flex;
+    // flex-direction: column;
+    // width: 88%;
 }
 
-button {
-    width: 160px;
-    height: 48px;
-    background: #FFFFFF;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25);
-    border-radius: 50px;
-    align-self: center;
-}
-
+// ion-button {
+//     width: 160px;
+//     height: 48px;
+//     background: #FFFFFF;
+//     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25);
+//     border-radius: 50px;
+//     align-self: center;
+// }
 span {
     color: white;
     font-size: 12px;
@@ -22,13 +21,13 @@ span {
 
 ion-content {
     --background: linear-gradient(180deg, #C50058 0%, #B721FF 100%);
-    --padding-top: 56px;
     --padding-bottom: 40px;
 }
 
 .logar {
     margin-top: 36px;
-    color: #8000CB;
+    --color: #8000CB;
+    --background: #FFFFFF;
     font-weight: bold;
     font-size: 18px
 }
@@ -40,13 +39,13 @@ ion-content {
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
+    display: flex;
 }
 
 .logo {
-    margin-top: 40px;
+    // margin-top: 40px;
     text-align: center;
 }
-
 
 .content {
     display: flex;
@@ -74,15 +73,15 @@ ion-content {
     color: white;
 }
 
-.recuperarSenha {
-    margin-top: 8px;
-    color: white;
-    font-size: 12px;
-    align-self: flex-end;
-}
-
+// .recuperarSenha {
+//     margin-top: 8px;
+//     color: white;
+//     font-size: 12px;
+//     align-self: flex-end;
+// }
 .criarContaBox {
-    align-self: center;
+    // align-self: center;
+    --border-color: transparent;
     position: fixed;
     bottom: 0;
     margin-bottom: 16px

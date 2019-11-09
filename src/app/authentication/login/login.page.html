@@ -1,21 +1,22 @@
 <header class="header">
-    
-	<div class="logo">
+
+    <div class="logo">
         <img src="assets/images/logo/logo.png" />
     </div>
 
 </header>
-
 <ion-content>
 
     <div class="content">
-        <form>
+        <form (submit)="onSubmit()" [formGroup]="autenticaForm">
             <ion-item class="item" lines="none">
-                <ion-input placeholder="Username" class="input-white"></ion-input>
+                <ion-input name="email" formControlName="email" placeholder="Email" class="input-white"></ion-input>
+                <ion-note color="danger" *ngIf="email.dirty && email.hasError('required')" slot="end">Obrigatorio</ion-note>
+
             </ion-item>
 
             <ion-item class="item" lines="none">
-                <ion-input placeholder="Password" type="password" class="input-white"></ion-input>
+                <ion-input name="password" formControlName="password" placeholder="Password" type="password" class="input-white"></ion-input>
                 <ion-icon name="eye"></ion-icon>
             </ion-item>
 

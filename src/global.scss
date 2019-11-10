@@ -76,12 +76,12 @@
 }
 
 .header-profiles {
-    padding-top: 0px;
+    width: 100%;
+    height: 190px;
     background: url("assets/images/profiles_top.svg");
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 35%;
 }
 
 
@@ -104,17 +104,15 @@
 }
 
 .input-pink {
-    border: 1px solid rgba(183, 33, 255, 0.8);
-    box-sizing: border-box;
-    border-radius: 4px;
-    margin-top: 4px;
-    margin-bottom: 4px;
-    height: 56px;
-    --placeholder-color: rgba(183, 33, 255, 0.8);
-    --placeholder-font-style: rgba(183, 33, 255, 0.8);
-    --placeholder-font-weight: rgba(183, 33, 255, 0.8);
+    // border: 1px solid rgba(183, 33, 255, 0.8);
+    // box-sizing: border-box;
+    // border-radius: 4px;
+    // margin-top: 4px;
+    // margin-bottom: 4px;
+    // height: 56px;
+    --placeholder-color: #B721FF;
+    --color: #B721FF;
     --placeholder-opacity: .8;
-    --padding-start: 16px !important;
 }
 
 .item-pink {

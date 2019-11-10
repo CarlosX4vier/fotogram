@@ -9,15 +9,12 @@
         <ion-title class="title">Crie sua conta</ion-title>
     </header>
 
-
-    <form class="mt-56" [formGroup]="createForm" (submit)="onSubmit()">
+    <form [formGroup]="accountForm" (submit)="onSubmit()" class="mt-56">
         <ion-grid>
-
             <ion-row class="ion-justify-content-center">
                 <ion-col size="12">
-                    <ion-item lines="none">
-                        <!-- Input with placeholder -->
-                        <ion-input type="text" class="input-pink" placeholder="Name" required></ion-input>
+                    <ion-item lines="none" class="item-input">
+                        <ion-input type="text" name="name" formControlName="name" class="input-pink" placeholder="Name"></ion-input>
                         <ion-note *ngIf="name.dirty && name.hasError('required')" slot="end">Obrigatório</ion-note>
                     </ion-item>
                 </ion-col>
@@ -25,9 +22,8 @@
 
             <ion-row class="ion-justify-content-center">
                 <ion-col size="12">
-                    <ion-item lines="none">
-                        <!-- Input with placeholder -->
-                        <ion-input type="email" class="input-pink" placeholder="E-mail" required></ion-input>
+                    <ion-item lines="none" class="item-input">
+                        <ion-input type="email" name="email" formControlName="email" class="input-pink" placeholder="E-mail"></ion-input>
                         <ion-note *ngIf="email.dirty && email.hasError('required')" slot="end">Obrigatório</ion-note>
                         <ion-note *ngIf="email.dirty && email.hasError('email')" slot="end">E-mail invalido</ion-note>
                     </ion-item>
@@ -36,9 +32,8 @@
 
             <ion-row class="ion-justify-content-center">
                 <ion-col size="12">
-                    <ion-item lines="none">
-                        <!-- Input with placeholder -->
-                        <ion-input type="password" class="input-pink" placeholder="Password" required></ion-input>
+                    <ion-item lines="none" class="item-input">
+                        <ion-input type="password" name="password" formControlName="password" class="input-pink" placeholder="Password"></ion-input>
                         <ion-note *ngIf="password.dirty && password.hasError('required')" slot="end">Obrigatório</ion-note>
                     </ion-item>
                 </ion-col>

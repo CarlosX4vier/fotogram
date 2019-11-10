@@ -1,17 +1,7 @@
 form {
-    // display: flex;
-    // flex-direction: column;
-    // width: 88%;
+    margin-top: 56px;
 }
 
-// ion-button {
-//     width: 160px;
-//     height: 48px;
-//     background: #FFFFFF;
-//     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25);
-//     border-radius: 50px;
-//     align-self: center;
-// }
 span {
     color: white;
     font-size: 12px;
@@ -21,20 +11,21 @@ span {
 
 ion-content {
     --background: linear-gradient(180deg, #C50058 0%, #B721FF 100%);
-    --padding-bottom: 40px;
+    --padding-bottom: 32px;
 }
 
 .logar {
-    margin-top: 36px;
     --color: #8000CB;
     --background: #FFFFFF;
     font-weight: bold;
-    font-size: 18px
+    font-size: 18px;
+    text-transform: none;
+    --color-activated: #8000CB;
 }
 
 .header {
     width: 100%;
-    height: 250px;
+    height: 208px;
     background: url('../../../assets/images/header.png');
     background-position: top;
     background-repeat: no-repeat;
@@ -42,53 +33,24 @@ ion-content {
     display: flex;
 }
 
-.logo {
-    // margin-top: 40px;
-    text-align: center;
-}
-
-.content {
-    display: flex;
-    justify-content: center;
-}
-
-.input-white {
-    height: 56px;
-    border: 0px solid rgba(255, 255, 255, 0.0);
-    --color: white;
-    --placeholder-opacity: 0.8;
-}
-
-.item {
+.item-input {
     border-radius: 4px;
     border: 1px solid rgba(255, 255, 255, 0.8);
     --background: transparent;
     --padding-start: 16px;
-    margin-top: 8px;
-    margin-bottom: 8px;
-    width: 100%;
+    --min-height: 56px;
+    height: 56px;
+    margin-top: 4px;
+    margin-bottom: 4px;
 }
 
 .item>ion-icon {
     color: white;
 }
 
-// .recuperarSenha {
-//     margin-top: 8px;
-//     color: white;
-//     font-size: 12px;
-//     align-self: flex-end;
-// }
-.criarContaBox {
-    // align-self: center;
-    --border-color: transparent;
-    position: fixed;
-    bottom: 0;
-    margin-bottom: 16px
-}
-
 .criarConta {
-    color: #EE61FF;
+    color: #ffce00;
     font-style: normal;
     font-weight: normal;
+    padding-left: 8px;
 }

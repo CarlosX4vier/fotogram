@@ -1,33 +1,45 @@
+<!-- <ion-header>
+    <ion-toolbar class="header-bar">
+        <ion-buttons slot="start">
+            <ion-back-button class="back" defaultHref="/profile-user" icon="arrow-round-back"></ion-back-button>
+        </ion-buttons>
+        <ion-title class="title">Configurações</ion-title>
+    </ion-toolbar>
+</ion-header> -->
+
 <header class="header-ifr">
-	<ion-button class="back" fill="clear">
-		<ion-icon name="arrow-round-back" slot="icon-only"></ion-icon>
-	</ion-button>
-	<h1 class="title">Crie sua conta</h1>
+    <ion-toolbar class="toolbar-c-r">
+        <ion-buttons slot="start">
+            <ion-back-button class="back" router-direction="back" defaultHref="/login" icon="arrow-round-back"></ion-back-button>
+        </ion-buttons>
+
+    </ion-toolbar>
+    <ion-title class="title">Crie sua conta</ion-title>
 </header>
 
 <ion-content>
 
-	<div class="content">
-		<form>
+    <div class="content">
+        <form>
 
-			<ion-item lines="none">
-				<!-- Input with placeholder -->
-				<ion-input type="text" class="input-pink" placeholder="Name" required></ion-input>
-			</ion-item>
+            <ion-item lines="none">
+                <!-- Input with placeholder -->
+                <ion-input type="text" class="input-pink" placeholder="Name" required></ion-input>
+            </ion-item>
 
-			<ion-item lines="none">
-				<!-- Input with placeholder -->
-				<ion-input type="email" class="input-pink" placeholder="E-mail" required></ion-input>
-			</ion-item>
+            <ion-item lines="none">
+                <!-- Input with placeholder -->
+                <ion-input type="email" class="input-pink" placeholder="E-mail" required></ion-input>
+            </ion-item>
 
-			<ion-item lines="none">
-				<!-- Input with placeholder -->
-				<ion-input type="password" class="input-pink" placeholder="Password" required></ion-input>
-			</ion-item>
+            <ion-item lines="none">
+                <!-- Input with placeholder -->
+                <ion-input type="password" class="input-pink" placeholder="Password" required></ion-input>
+            </ion-item>
 
-			<ion-button class="btn-pink" fill="clear">Cadastrar</ion-button>
+            <ion-button class="btn-pink" fill="clear">Cadastrar</ion-button>
 
-		</form>
-	</div>
+        </form>
+    </div>
 
 </ion-content>

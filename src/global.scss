@@ -49,7 +49,16 @@
     --ion-color-tint: var(--ion-color-primary-tint);
 }
 
+
+/* TEXT */
+
+.text-transform-none {
+    text-transform: none;
+}
+
+
 /* HEADER */
+
 .header-ifr {
     width: 100%;
     height: 150px;
@@ -57,6 +66,13 @@
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.header-bar {
+    --background: linear-gradient(90deg, #C50058 0%, #B721FF 100%);
+    --padding-top: 16px;
+    --padding-bottom: 16px;
+    --color: #FFF;
 }
 
 .header-profiles {
@@ -68,7 +84,9 @@
     height: 35%;
 }
 
+
 /* Button BACK */
+
 .back {
     --color: #FFF;
     --background-activated: #B721FF;
@@ -77,6 +95,13 @@
 
 
 /* CSS INPUT*/
+
+.input-white {
+    height: 56px;
+    border: 0px solid rgba(255, 255, 255, 0.0);
+    --color: white;
+    --placeholder-opacity: 0.8;
+}
 
 .input-pink {
     height: 56px;

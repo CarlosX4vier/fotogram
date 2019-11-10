@@ -1,36 +1,59 @@
-<header class="header">
-
-    <div class="logo">
-        <img src="assets/images/logo/logo.png" />
-    </div>
-
-</header>
 <ion-content>
+    <header class="header ion-align-items-center ion-justify-content-center">
 
-    <div class="content">
-        <form (submit)="onSubmit()" [formGroup]="autenticaForm">
-            <ion-item class="item" lines="none">
-                <ion-input name="email" formControlName="email" placeholder="Email" class="input-white"></ion-input>
-                <ion-note color="danger" *ngIf="email.dirty && email.hasError('required')" slot="end">Obrigatorio</ion-note>
+        <div class="">
+            <img src="assets/images/logo/logo.png" />
+        </div>
 
-            </ion-item>
+    </header>
 
-            <ion-item class="item" lines="none">
-                <ion-input name="password" formControlName="password" placeholder="Password" type="password" class="input-white"></ion-input>
-                <ion-icon name="eye"></ion-icon>
-            </ion-item>
 
-            <span class="recuperarSenha">Esqueceu a senha?</span>
+    <!-- <div class="content"> -->
+    <form (submit)="onSubmit('email')" [formGroup]="autenticaForm">
 
-            <button class="logar">Entrar</button>
+        <ion-grid>
 
-            <div class="criarContaBox">
-                <span>Novo no Fotogram? </span>
-                <span class="criarConta">Crie uma conta</span>
-            </div>
+            <ion-row class="ion-justify-content-center">
+                <ion-col size="12">
+                    <ion-item class="item" lines="none">
+                        <ion-input name="email" formControlName="email" placeholder="Email" class="input-white"></ion-input>
+                        <ion-note color="warning" *ngIf="email.dirty && email.hasError('required')" slot="end">Obrigatorio</ion-note>
+                        <ion-note color="warning" *ngIf="email.dirty && email.hasError('email')" slot="end">E-mail inválido!</ion-note>
+                    </ion-item>
+                </ion-col>
+            </ion-row>
 
-        </form>
+            <ion-row class="ion-justify-content-center">
+                <ion-col size="12">
+                    <ion-item class="item" lines="none">
+                        <ion-input name="password" formControlName="password" placeholder="Password" type="password" class="input-white"></ion-input>
+                        <ion-icon name="eye" slot="end"></ion-icon>
+                    </ion-item>
+                </ion-col>
+                <ion-col size="12" class="ion-text-end">
+                    <span class="recuperarSenha">Esqueceu a senha?</span>
+                </ion-col>
+            </ion-row>
 
-    </div>
+        </ion-grid>
+
+    </form>
+
+    <ion-grid>
+        <ion-row class="ion-justify-content-center">
+            <ion-col class="ion-text-center">
+                <ion-button [disabled]="autenticaForm.invalid" type="submit" class="logar" (click)="onSubmit('email')">Entrar</ion-button>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+
+
+
+    <ion-item class="criarContaBox" lines="none">
+        <span>Novo no Fotogram? </span>
+        <span class="criarConta">Crie uma conta</span>
+    </ion-item>
+
+    <!-- </div> -->
 
 </ion-content>

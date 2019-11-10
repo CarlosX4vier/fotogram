@@ -104,10 +104,17 @@
 }
 
 .input-pink {
+    border: 1px solid rgba(183, 33, 255, 0.8);
+    box-sizing: border-box;
+    border-radius: 4px;
+    margin-top: 4px;
+    margin-bottom: 4px;
     height: 56px;
-    border: 0px solid rgba(255, 255, 255, 0);
-    --color: rgba(183, 33, 255, 0.8);
-    --placeholder-opacity: 0.8;
+    --placeholder-color: rgba(183, 33, 255, 0.8);
+    --placeholder-font-style: rgba(183, 33, 255, 0.8);
+    --placeholder-font-weight: rgba(183, 33, 255, 0.8);
+    --placeholder-opacity: .8;
+    --padding-start: 16px !important;
 }
 
 .item-pink {
@@ -117,4 +124,18 @@
     --padding-start: 15px;
     margin-top: 10px;
     width: 100%;
+}
+
+
+/* Toolbar */
+
+.toolbar-c-r {
+    --background: transparent;
+}
+
+
+/* MARGIN */
+
+.mt-56 {
+    margin-top: 56px;
 }

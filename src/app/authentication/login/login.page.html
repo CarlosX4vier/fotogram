@@ -22,6 +22,7 @@
                     <ion-item class="item-input" lines="none">
                         <ion-input name="password" formControlName="password" placeholder="Password" type="password" class="input-white"></ion-input>
                         <ion-icon name="eye" slot="end"></ion-icon>
+                        <ion-note color="warning" *ngIf="password.dirty && password.hasError('required')" slot="end">Obrigatorio</ion-note>
                     </ion-item>
                 </ion-col>
                 <ion-col size="12" class="ion-text-end">

@@ -1,11 +1,3 @@
-<!-- <ion-header>
-    <ion-toolbar class="header-bar">
-        <ion-buttons slot="start">
-            <ion-back-button class="back" defaultHref="/profile-user" icon="arrow-round-back"></ion-back-button>
-        </ion-buttons>
-        <ion-title class="title">Configurações</ion-title>
-    </ion-toolbar>
-</ion-header> -->
 <ion-content>
     <header class="header-ifr">
         <ion-toolbar class="toolbar-c-r">
@@ -18,7 +10,7 @@
     </header>
 
 
-    <form>
+    <form class="mt-56" [formGroup]="createForm" (submit)="onSubmit()">
         <ion-grid>
 
             <ion-row class="ion-justify-content-center">
@@ -26,6 +18,7 @@
                     <ion-item lines="none">
                         <!-- Input with placeholder -->
                         <ion-input type="text" class="input-pink" placeholder="Name" required></ion-input>
+                        <ion-note *ngIf="name.dirty && name.hasError('required')" slot="end">Obrigatório</ion-note>
                     </ion-item>
                 </ion-col>
             </ion-row>
@@ -35,6 +28,8 @@
                     <ion-item lines="none">
                         <!-- Input with placeholder -->
                         <ion-input type="email" class="input-pink" placeholder="E-mail" required></ion-input>
+                        <ion-note *ngIf="email.dirty && email.hasError('required')" slot="end">Obrigatório</ion-note>
+                        <ion-note *ngIf="email.dirty && email.hasError('email')" slot="end">E-mail invalido</ion-note>
                     </ion-item>
                 </ion-col>
             </ion-row>
@@ -44,13 +39,14 @@
                     <ion-item lines="none">
                         <!-- Input with placeholder -->
                         <ion-input type="password" class="input-pink" placeholder="Password" required></ion-input>
+                        <ion-note *ngIf="password.dirty && password.hasError('required')" slot="end">Obrigatório</ion-note>
                     </ion-item>
                 </ion-col>
             </ion-row>
 
             <ion-row class="ion-justify-content-center">
                 <ion-col class="ion-text-center">
-                    <ion-button class="btn-pink text-transform-none" type="submit" router-direction="forward" href="create-account" shape="round" size="large" fill="clear">Cadastrar</ion-button>
+                    <ion-button class="btn-pink text-transform-none" type="submit" shape="round" size="large" fill="clear">Cadastrar</ion-button>
                 </ion-col>
             </ion-row>
 

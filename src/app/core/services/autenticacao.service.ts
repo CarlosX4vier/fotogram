@@ -15,7 +15,7 @@ export class AutenticacaoService {
     this.estadoAutenticacao$ = this.fbAuth.authState
   }
 
-  private createAccount(name: string, email: string, password: string): Promise<auth.UserCredential> {
+   createAccount(name: string, email: string, password: string): Promise<auth.UserCredential> {
     return this.fbAuth.auth.createUserWithEmailAndPassword(email, password)
       .then(credentials =>
         credentials.user.updateProfile({ displayName: name, photoURL: "" })
@@ -23,7 +23,7 @@ export class AutenticacaoService {
       )
   }
 
-  private login(email: string, password:string):Promise<auth.UserCredential>{
+  logar(email: string, password:string):Promise<auth.UserCredential>{
     return this.fbAuth.auth.signInWithEmailAndPassword(email,password)
   }
 }

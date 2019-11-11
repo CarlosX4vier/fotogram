@@ -12,21 +12,23 @@
 </ion-header>
 
 <ion-content>
-    <ion-list>
+    <ion-grid class="mt-32">
+        <ion-row>
+            <ion-col size="6" class="image-gallery" *ngFor="let item of (posts$ | async)">
+                <ion-card class="ion-no-margin">
+                    <ion-img src="{{item.image}}"></ion-img>
+                    <ion-card-header class="avatar-overlay ion-no-padding">
+                        <ion-fab vertical="top" horizontal="start">
+                            <ion-fab-button class="delete-photo ion-no-margin" size="small" (click)="delete()">
+                                <ion-icon name="close"></ion-icon>
+                            </ion-fab-button>
+                        </ion-fab>
 
-        <ion-card *ngFor="let item of (posts$ | async)">
-            <ion-img src="{{item.image}}"></ion-img>
-            <ion-card-header class="avatar-overlay">
-                <ion-fab>
-                    <ion-fab-button class="fab-avatar" (click)="delete()">
-                        <ion-icon name="close"></ion-icon>
-                    </ion-fab-button>
-                </ion-fab>
-
-            </ion-card-header>
-        </ion-card>
-
-    </ion-list>
+                    </ion-card-header>
+                </ion-card>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
 
     <ion-fab vertical="bottom" horizontal="end" slot="fixed">
         <ion-fab-button (click)="abrirGaleria()">

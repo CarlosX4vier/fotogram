@@ -27,14 +27,9 @@ const routes: Routes = [
     loadChildren: "./navigation/feed/feed.module#FeedPageModule"
   },
   {
-    path: "profile-user",
-    loadChildren: "./navigation/profile-user/profile-user.module#ProfileUserPageModule"
-  },
-  {
     path: "invite",
     loadChildren: "./user/invite/invite.module#InvitePageModule"
   },
-  { path: 'profile', loadChildren: './user/profile/profile.module#ProfilePageModule' }
 
 ];
 

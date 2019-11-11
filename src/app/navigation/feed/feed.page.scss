@@ -9,18 +9,21 @@ span {
 
 .chip {
     --background: transparent;
-    --color-activated: #FFF;
 }
 
-.chip ion-avatar {
-    width: 32px;
-    height: 32px;
+
+.avatar-fab {
+    --background: transparent;
+    --border-radius: 30px;
+    --box-shadow: none;
+    width: 48px;
+    height: 48px;
 }
 
 .users-avatar {
-    height: 48px;
-    width: 48px;
-    border: 2px solid #8000CB;
+    height: 32px;
+    width: 32px;
+    border: 1px solid #8000CB;
 }
 
 .avatar-overlay {
@@ -35,60 +38,4 @@ span {
     --background: transparent;
     height: 48px;
     width: 48px;
-}
-
-.content {
-    width: 100%;
-    min-height: 50%;
-    overflow: auto;
-}
-
-.header {
-    padding: 16px;
-    background: url("/assets/images/feed_top.svg");
-    background-position: top;
-    background-repeat: no-repeat;
-    height: 29%;
-}
-
-.user {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
-}
-
-.avatar {
-    background: #fcfcfc;
-    border-radius: 60px;
-    width: 32px;
-    height: 32px;
-    margin-left: 8px;
-}
-
-.postagens {
-    display: inline;
-    top: -110px;
-    position: relative;
-}
-
-.card {
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25);
-    width: 93%;
-    background: rgb(240, 240, 240);
-    align-self: center;
-    padding: 16px;
-    height: 36.5%;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 5px;
-    margin-top: 24px;
-}
-
-.card>.avatar {
-    background: #c4c4c4;
-    border: 1px solid rgba(128, 0, 203, 1);
-    height: 52px;
-    margin-left: 0px;
-    width: 52px;
 }

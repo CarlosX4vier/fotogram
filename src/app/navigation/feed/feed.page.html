@@ -1,13 +1,13 @@
 <ion-header>
     <ion-toolbar class="header-bar">
-        <ion-title slot="end" class="ion-no-padding">
-            <ion-item class="chip text-white ion-no-padding" routerLink="/profile" routerDirection="forward" lines="none">
-                <ion-label class="ion-text-end">{{displayName}}</ion-label>
-                <ion-avatar class="ion-margin-start">
-                    <img src="{{photoURL || '/assets/images/avatar.png'}}">
-                </ion-avatar>
-            </ion-item>
-        </ion-title>
+        <ion-item class="chip text-white" lines="none">
+            <ion-label class="ion-text-end">{{displayName}}</ion-label>
+            <ion-button class="avatar-fab ion-margin-start" routerLink="/settings" routerDirection="forward">
+                    <ion-avatar class="users-avatar">
+                        <img src="{{photoURL || '/assets/images/avatar.png'}}">
+                    </ion-avatar>
+            </ion-button>
+        </ion-item>
     </ion-toolbar>
 </ion-header>
 
@@ -19,10 +19,8 @@
             <ion-img src="{{item.image}}"></ion-img>
             <ion-card-header class="avatar-overlay">
                 <ion-fab>
-                    <ion-fab-button class="fab-avatar" routerLink="/profile-user" routerDirection="forward">
-                        <ion-avatar class="users-avatar">
-                            <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
-                        </ion-avatar>
+                    <ion-fab-button class="fab-avatar" (click)="delete()">
+                        <ion-icon name="close"></ion-icon>
                     </ion-fab-button>
                 </ion-fab>
 
@@ -33,7 +31,7 @@
 
     <ion-fab vertical="bottom" horizontal="end" slot="fixed">
         <ion-fab-button (click)="abrirGaleria()">
-            <img src="\assets\icon\camera.svg" alt="" srcset="" />
+            <img src="\assets\icon\camera.svg" alt="" srcset=""/>
         </ion-fab-button>
     </ion-fab>
 

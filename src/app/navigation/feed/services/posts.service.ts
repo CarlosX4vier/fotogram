@@ -12,11 +12,17 @@ export class PostsService {
   private collection: AngularFirestoreCollection<Post>
 
   constructor(private db: AngularFirestore, private AuthService: AutenticacaoService) {
-    this.db.collection('/posts/')
+   this.collection= this.db.collection('/posts/')
   }
 
   create(p: Post): Promise<Post> {
+    try{
     return this.collection.add(p).then(() => p);
+    }catch(e){
+      console.log(e)
+    }
+    return this.collection.add(p).then(() => p);
+
   }
 
   update(p: Post): Promise<Post> {

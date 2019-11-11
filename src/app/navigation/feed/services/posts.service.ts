@@ -18,9 +18,9 @@ export class PostsService {
 
     AuthService.estadoAutenticacao$.forEach(user => {
       this.ref = this.storage.ref(`/${user.uid}/`)
-      if(user){
-      this.collection = this.db.collection(`/user/${user.uid}/fotos/`)
-      }else{
+      if (user) {
+        this.collection = this.db.collection(`/user/${user.uid}/fotos/`)
+      } else {
         this.collection = this.db.collection(null)
       }
     })

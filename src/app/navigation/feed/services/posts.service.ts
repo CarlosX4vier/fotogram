@@ -15,14 +15,19 @@ export class PostsService {
 
 
   constructor(private db: AngularFirestore, private AuthService: AutenticacaoService, private storage: AngularFireStorage) {
-    this.collection = this.db.collection('/posts/')
-    AuthService.estadoAutenticacao$.subscribe(user => {
+
+    AuthService.estadoAutenticacao$.forEach(user => {
       this.ref = this.storage.ref(`/${user.uid}/`)
+      if(user){
+      this.collection = this.db.collection(`/user/${user.uid}/fotos/`)
+      }else{
+        this.collection = this.db.collection(null)
+      }
     })
 
   }
 
-   upload(image: string):Promise<string> {
+  upload(image: string): Promise<string> {
     var file = md5(Date.now()) + ".png"
     var ref = this.ref.child(file)
     return ref.putString(image, "base64", { contentType: "image/png" }).then(snapshot => {

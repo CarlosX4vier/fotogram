@@ -49,11 +49,19 @@
     --ion-color-tint: var(--ion-color-primary-tint);
 }
 
+.d-flex {
+    display: flex;
+}
+
 
 /* TEXT */
 
 .text-transform-none {
     text-transform: none;
+}
+
+.text-white {
+    color: #FFF !important;
 }
 
 
@@ -70,8 +78,6 @@
 
 .header-bar {
     --background: linear-gradient(90deg, #C50058 0%, #B721FF 100%);
-    --padding-top: 16px;
-    --padding-bottom: 16px;
     --color: #FFF;
 }
 

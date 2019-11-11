@@ -7,9 +7,34 @@ span {
     color: rgb(255, 255, 255);
 }
 
-ion-fab {
-    bottom: 10px;
-    right: 5px;
+.chip {
+    --background: transparent;
+    --color-activated: #FFF;
+}
+
+.chip ion-avatar {
+    width: 32px;
+    height: 32px;
+}
+
+.users-avatar {
+    height: 48px;
+    width: 48px;
+    border: 2px solid #8000CB;
+}
+
+.avatar-overlay {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.fab-avatar {
+    --background: transparent;
+    height: 48px;
+    width: 48px;
 }
 
 .content {

@@ -11,6 +11,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AngularFireModule } from '@angular/fire';
 import { environment } from 'src/environments/environment';
 import { AngularFireAuthModule, AngularFireAuth } from '@angular/fire/auth';
+import { Camera } from '@ionic-native/camera/ngx';
+
 
 @NgModule({
   declarations: [AppComponent],
@@ -23,6 +25,7 @@ import { AngularFireAuthModule, AngularFireAuth } from '@angular/fire/auth';
     AngularFireModule,
     AngularFireAuthModule,
     AngularFireAuth,
+    Camera,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]

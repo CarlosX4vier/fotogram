@@ -3,7 +3,7 @@
         <img src="assets/images/logo/logo_fotogram.svg" />
     </header>
 
-    <form (submit)="onSubmit('email')" [formGroup]="autenticaForm">
+    <form (submit)="onSubmit('email')" [formGroup]="autenticaForm" class="mt-56 ion-padding-start ion-padding-end">
 
         <ion-grid>
 
@@ -36,7 +36,7 @@
 
     </form>
 
-    <ion-grid padding>
+    <ion-grid class="ion-padding-start ion-padding-end">
         <ion-row class="ion-justify-content-center">
             <ion-col class="ion-text-center">
                 <ion-button [disabled]="autenticaForm.invalid" type="submit" class="logar" (click)="onSubmit('email')" shape="round" routerLink="/feed" routerDirection="forward" size="large" expand="block">Entrar</ion-button>

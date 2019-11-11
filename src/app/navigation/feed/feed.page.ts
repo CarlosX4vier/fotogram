@@ -3,6 +3,9 @@ import { AutenticacaoService } from 'src/app/core/services/autenticacao.service'
 import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
 import { PostsService } from './services/posts.service';
 import { Post } from './model/post'
+import { FirebaseStorage } from '@angular/fire';
+import { AngularFireStorageReference } from '@angular/fire/storage';
+
 
 @Component({
   selector: 'app-feed',
@@ -25,22 +28,27 @@ export class FeedPage implements OnInit {
   }
 
   ngOnInit() {
-    
+
     this.carregar()
-    this.postService.buscaTodos().forEach(post => {this.items= post})
-  }
-
-
-  postar(): void {
-    this.postService.create({ autor: "3", texto: "Texte", data: 13123, image: "" } as Post);
+    this.postService.buscaTodos().forEach(post => { this.items = post })
   }
 
   abrirGaleria(): void {
     this.camera.getPicture(this.options).then((imageData) => {
       // imageData is either a base64 encoded string or a file URI
       // If it's base64 (DATA_URL):
-      let base64Image = 'data:image/jpeg;base64,' + imageData;
-      console.log(base64Image);
+      //'data:image/jpeg;base64,' + 
+      let base64Image = imageData;
+      let data: number = Date.now() / 1000;
+      this.AuthService.estadoAutenticacao$.subscribe(async user => {
+
+        let file = await this.postService.upload(base64Image)
+        console.log("A" + file)
+
+        this.postService.create({ id: "", autor: user.uid, data: data, image: file } as Post);
+
+        console.log(base64Image);
+      })
     }, (err) => {
       // Handle error
     });

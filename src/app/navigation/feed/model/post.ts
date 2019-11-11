@@ -3,5 +3,4 @@ export interface Post {
     data:number,
     autor:string,
     image: string,
-    texto: string
 }

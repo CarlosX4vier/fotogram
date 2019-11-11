@@ -13,7 +13,7 @@ import { environment } from 'src/environments/environment';
 import { AngularFireAuthModule, AngularFireAuth } from '@angular/fire/auth';
 import { Camera } from '@ionic-native/camera/ngx';
 import { AngularFirestore, AngularFirestoreModule } from '@angular/fire/firestore';
-
+import {AngularFireStorage, AngularFireStorageModule } from '@angular/fire/storage'
 
 @NgModule({
   declarations: [AppComponent],
@@ -28,6 +28,8 @@ import { AngularFirestore, AngularFirestoreModule } from '@angular/fire/firestor
     AngularFireAuth,
     AngularFirestoreModule,
     AngularFirestore,
+    AngularFireStorage,
+    AngularFireStorageModule,
     Camera,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],

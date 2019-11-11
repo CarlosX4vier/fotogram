@@ -1,39 +1,82 @@
-<ion-fab>
-    <ion-fab-button>
-        <img src="\assets\icon\camera.svg" alt="" srcset="" />
-    </ion-fab-button>
-</ion-fab>
-<div class="content">
-    <div class="header">
-        <div class="user">
-            <span>Anonymous</span>
-            <img src="/assets/images/avatar.png" alt="" class="avatar" />
-        </div>
-    </div>
-    <div class="postagens">
-        <div class="card">
-            <div class="avatar"></div>
-        </div>
-        <div class="card">
-            <div class="avatar"></div>
-        </div>
-        <div class="card">
-            <div class="avatar"></div>
-        </div>
-        <div class="card">
-            <div class="avatar"></div>
-        </div>
-        <div class="card">
-            <div class="avatar"></div>
-        </div>
-        <div class="card">
-            <div class="avatar"></div>
-        </div>
-        <div class="card">
-            <div class="avatar"></div>
-        </div>
-        <div class="card">
-            <div class="avatar"></div>
-        </div>
-    </div>
-</div>
+<ion-header>
+    <ion-toolbar class="header-bar">
+        <ion-title slot="end" class="ion-no-padding">
+            <ion-item class="chip text-white ion-no-padding" href="profile" lines="none">
+                <ion-label class="ion-text-end">{{displayName}}</ion-label>
+                <ion-avatar class="ion-margin-start">
+                    <img src="{{photoURL || '/assets/images/avatar.png'}}">
+                </ion-avatar>
+            </ion-item>
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <ion-list>
+
+        <ion-card>
+            <ion-img src="assets/images/teste.jpg"></ion-img>
+            <ion-card-header class="avatar-overlay">
+                <ion-fab>
+                    <ion-fab-button class="fab-avatar" href="profile-user" router-direction="forward">
+                        <ion-avatar class="users-avatar">
+                            <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+                        </ion-avatar>
+                    </ion-fab-button>
+                </ion-fab>
+
+            </ion-card-header>
+        </ion-card>
+
+        <ion-card>
+            <ion-img src="assets/images/teste.jpg"></ion-img>
+            <ion-card-header class="avatar-overlay">
+                <ion-fab>
+                    <ion-fab-button class="fab-avatar" href="profile-user" router-direction="forward">
+                        <ion-avatar class="users-avatar">
+                            <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+                        </ion-avatar>
+                    </ion-fab-button>
+                </ion-fab>
+
+            </ion-card-header>
+        </ion-card>
+
+        <ion-card>
+            <ion-img src="assets/images/teste.jpg"></ion-img>
+            <ion-card-header class="avatar-overlay">
+                <ion-fab>
+                    <ion-fab-button class="fab-avatar" href="profile-user" router-direction="forward">
+                        <ion-avatar class="users-avatar">
+                            <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+                        </ion-avatar>
+                    </ion-fab-button>
+                </ion-fab>
+
+            </ion-card-header>
+        </ion-card>
+
+        <ion-card>
+            <ion-img src="assets/images/teste.jpg"></ion-img>
+            <ion-card-header class="avatar-overlay">
+                <ion-fab>
+                    <ion-fab-button class="fab-avatar" href="profile-user" router-direction="forward">
+                        <ion-avatar class="users-avatar">
+                            <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+                        </ion-avatar>
+                    </ion-fab-button>
+                </ion-fab>
+
+            </ion-card-header>
+        </ion-card>
+
+    </ion-list>
+
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+        <ion-fab-button>
+            <img src="\assets\icon\camera.svg" alt="" srcset="" />
+        </ion-fab-button>
+    </ion-fab>
+
+</ion-content>

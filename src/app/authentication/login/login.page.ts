@@ -23,6 +23,7 @@ export class LoginPage implements OnInit {
     console.log(this.autenticaForm)
     try {
       const credential = await this.AuthService.logar(this.autenticaForm.get('email').value, this.autenticaForm.get('password').value);
+      this.navCtrl.navigateForward('feed')
       console.log(credential)
     } catch (error) {
       console.log(error)

@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AutenticacaoService } from 'src/app/core/services/autenticacao.service';
 import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
 import { PostsService } from './services/posts.service';
-import {Post} from './model/post'
+import { Post } from './model/post'
 
 @Component({
   selector: 'app-feed',
@@ -11,6 +11,7 @@ import {Post} from './model/post'
 })
 export class FeedPage implements OnInit {
 
+  items;
   displayName: string = ""
   photoURL: string = ""
   options: CameraOptions = {
@@ -20,16 +21,19 @@ export class FeedPage implements OnInit {
     mediaType: this.camera.MediaType.PICTURE
   }
 
-  constructor(private AuthService: AutenticacaoService, private camera: Camera, private postService:PostsService) {
+  constructor(private AuthService: AutenticacaoService, private camera: Camera, private postService: PostsService) {
   }
 
   ngOnInit() {
+    
     this.carregar()
+    this.postService.buscaTodos().forEach(post => {this.items= post})
   }
 
- /* postar():void{
-this.postService.create();
-  }*/
+
+  postar(): void {
+    this.postService.create({ autor: "3", texto: "Texte", data: 13123, image: "" } as Post);
+  }
 
   abrirGaleria(): void {
     this.camera.getPicture(this.options).then((imageData) => {

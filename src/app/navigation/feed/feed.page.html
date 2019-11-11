@@ -1,5 +1,5 @@
 <ion-fab>
-    <ion-fab-button>
+    <ion-fab-button (click)="postar()">
         <img src="\assets\icon\camera.svg" alt="" srcset="" />
     </ion-fab-button>
 </ion-fab>
@@ -11,29 +11,8 @@
         </div>
     </div>
     <div class="postagens">
-        <div class="card">
-            <div class="avatar"></div>
-        </div>
-        <div class="card">
-            <div class="avatar"></div>
-        </div>
-        <div class="card">
-            <div class="avatar"></div>
-        </div>
-        <div class="card">
-            <div class="avatar"></div>
-        </div>
-        <div class="card">
-            <div class="avatar"></div>
-        </div>
-        <div class="card">
-            <div class="avatar"></div>
-        </div>
-        <div class="card">
-            <div class="avatar"></div>
-        </div>
-        <div class="card">
-            <div class="avatar"></div>
+        <div *ngFor="let item of items" class="card">
+            <div class="avatar">{{item.autor}}</div>
         </div>
     </div>
 </div>

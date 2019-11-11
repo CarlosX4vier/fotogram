@@ -28,7 +28,8 @@ export class PostsService {
     return ref.putString(image, "base64", { contentType: "image/png" }).then(snapshot => {
       console.log("Uploadando")
       console.log(snapshot)
-      return snapshot.metadata.fullPath
+      snapshot.ref.getDownloadURL().then(url => console.log(url))
+      return snapshot.ref.getDownloadURL().then(url => url)
     })
 
   }

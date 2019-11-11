@@ -3,8 +3,7 @@ import { AutenticacaoService } from 'src/app/core/services/autenticacao.service'
 import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
 import { PostsService } from './services/posts.service';
 import { Post } from './model/post'
-import { FirebaseStorage } from '@angular/fire';
-import { AngularFireStorageReference } from '@angular/fire/storage';
+import { Observable } from 'rxjs';
 
 
 @Component({
@@ -14,7 +13,8 @@ import { AngularFireStorageReference } from '@angular/fire/storage';
 })
 export class FeedPage implements OnInit {
 
-  items;
+  posts$ = new Observable<Post[]>();
+
   displayName: string = ""
   photoURL: string = ""
   options: CameraOptions = {
@@ -30,7 +30,7 @@ export class FeedPage implements OnInit {
   ngOnInit() {
 
     this.carregar()
-    this.postService.buscaTodos().forEach(post => { this.items = post })
+    this.posts$ = this.postService.buscaTodos()
   }
 
   abrirGaleria(): void {
@@ -43,11 +43,8 @@ export class FeedPage implements OnInit {
       this.AuthService.estadoAutenticacao$.subscribe(async user => {
 
         let file = await this.postService.upload(base64Image)
-        console.log("A" + file)
-
         this.postService.create({ id: "", autor: user.uid, data: data, image: file } as Post);
 
-        console.log(base64Image);
       })
     }, (err) => {
       // Handle error

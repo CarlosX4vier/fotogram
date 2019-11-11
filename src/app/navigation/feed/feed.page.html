@@ -15,36 +15,8 @@
 
     <ion-list>
 
-        <ion-card *ngFor="let item of items">
-            <ion-img src="assets/images/teste.jpg"></ion-img>
-            <ion-card-header class="avatar-overlay">
-                <ion-fab>
-                    <ion-fab-button class="fab-avatar" routerLink="/profile-user" routerDirection="forward">
-                        <ion-avatar class="users-avatar">
-                            <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
-                        </ion-avatar>
-                    </ion-fab-button>
-                </ion-fab>
-
-            </ion-card-header>
-        </ion-card>
-
-        <ion-card>
-            <ion-img src="assets/images/teste.jpg"></ion-img>
-            <ion-card-header class="avatar-overlay">
-                <ion-fab>
-                    <ion-fab-button class="fab-avatar" routerLink="/profile-user" routerDirection="forward">
-                        <ion-avatar class="users-avatar">
-                            <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
-                        </ion-avatar>
-                    </ion-fab-button>
-                </ion-fab>
-
-            </ion-card-header>
-        </ion-card>
-
-        <ion-card>
-            <ion-img src="assets/images/teste.jpg"></ion-img>
+        <ion-card *ngFor="let item of (posts$ | async)">
+            <ion-img src="{{item.image}}"></ion-img>
             <ion-card-header class="avatar-overlay">
                 <ion-fab>
                     <ion-fab-button class="fab-avatar" routerLink="/profile-user" routerDirection="forward">

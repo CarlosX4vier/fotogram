@@ -30,7 +30,6 @@ export class FeedPage implements OnInit {
   ngOnInit() {
 
     this.carregar()
-    this.posts$ = this.postService.buscaTodos()
   }
 
   abrirGaleria(): void {
@@ -43,7 +42,7 @@ export class FeedPage implements OnInit {
       this.AuthService.estadoAutenticacao$.subscribe(async user => {
 
         let file = await this.postService.upload(base64Image)
-        this.postService.create({ id: "", autor: user.uid, data: data, image: file } as Post);
+        this.postService.create({ id: "", data: data, image: file } as Post);
 
       })
     }, (err) => {
@@ -56,6 +55,8 @@ export class FeedPage implements OnInit {
     this.AuthService.estadoAutenticacao$.subscribe(user => {
       this.displayName = user.displayName
       this.photoURL = user.photoURL
+      this.posts$ = this.postService.buscaTodos()
+
     })
   }
 }

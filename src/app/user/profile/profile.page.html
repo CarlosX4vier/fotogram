@@ -1,45 +1,170 @@
-<div class="content">
-    <div class="header-profiles">
-        <div class="header-buttons">
-            <ion-back-button class="back" defaultHref="/feed" icon="arrow-round-back"></ion-back-button>
-            <ion-button fill="clear">
+<ion-content>
+
+    <header class="header-profiles">
+        <ion-toolbar class="toolbar-c-r">
+            <ion-buttons slot="start">
+                <ion-back-button class="back" defaultHref="/feed" icon="arrow-round-back"></ion-back-button>
+            </ion-buttons>
+            <ion-button fill="clear" slot="end" routerLink="/settings" routerDirection="forward">
                 <ion-icon class="back" name="settings"></ion-icon>
             </ion-button>
-        </div>
-        <div class="flex-row">
-            <div class="info">
-                <ion-icon class="icon-profile" icon name="heart-empty"></ion-icon>
-                <span>1258</span>
-            </div>
-            <div class="user">
-                <div class="avatar"></div>
-                <h1>Anonymous</h1>
-                <h2>12 publicações</h2>
-            </div>
-            <div class="info">
-                <ion-icon class="icon-profile" icon name="eye"></ion-icon>
-                <span>1258</span>
-            </div>
-        </div>
-    </div>
-    <div class="postagens">
-        <div class="post"></div>
-        <div class="post"></div>
-        <div class="post"></div>
-        <div class="post"></div>
-        <div class="post"></div>
-        <div class="post"></div>
-        <div class="post"></div>
-        <div class="post"></div>
-        <div class="post"></div>
-        <div class="post"></div>
-        <div class="post"></div>
-        <div class="post"></div>
-        <div class="post"></div>
-        <div class="post"></div>
-        <div class="post"></div>
-        <div class="post"></div>
-        <div class="post"></div>
-        <div class="post"></div>
-    </div>
-</div>
+        </ion-toolbar>
+
+        <ion-grid class="ion-no-margin ion-no-padding information">
+            <ion-row class="ion-no-padding">
+
+                <ion-col size="4" class="d-flex ion-justify-content-center ion-align-items-center ion-no-padding">
+                    <ion-icon class="icon-profile" icon name="heart-empty"></ion-icon>
+                    <span class="numbers">1258</span>
+                </ion-col>
+
+
+                <ion-col class="d-flex ion-justify-content-center ion-no-padding" size="4">
+                    <ion-avatar class="avatar">
+                        <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+                    </ion-avatar>
+
+                </ion-col>
+
+                <ion-col size="4" class="d-flex ion-justify-content-center ion-align-items-center ion-no-padding">
+                    <ion-icon class="icon-profile" icon name="eye"></ion-icon>
+                    <span class="numbers">1258</span>
+                </ion-col>
+            </ion-row>
+
+            <ion-row>
+                <ion-col size="12" class="d-flex ion-justify-content-center ion-align-items-center ion-no-padding">
+                    <h1>Anonymous</h1>
+                </ion-col>
+                <ion-col size="12" class="d-flex ion-justify-content-center ion-align-items-center ion-no-padding">
+                    <h2>12 publicações</h2>
+                </ion-col>
+            </ion-row>
+
+        </ion-grid>
+
+    </header>
+
+
+
+    <ion-grid class="mt-32">
+        <ion-row>
+
+            <ion-col size="4" class="image-gallery">
+                <ion-card class="ion-no-padding ion-no-margin">
+                    <ion-img src="assets/images/teste.jpg"></ion-img>
+                </ion-card>
+            </ion-col>
+
+            <ion-col size="4" class="image-gallery">
+                <ion-card class="ion-no-padding ion-no-margin">
+                    <ion-img src="assets/images/teste2.jpg"></ion-img>
+                </ion-card>
+            </ion-col>
+
+            <ion-col size="4" class="image-gallery">
+                <ion-card class="ion-no-padding ion-no-margin">
+                    <ion-img src="assets/images/teste3.jpg"></ion-img>
+                </ion-card>
+            </ion-col>
+
+            <ion-col size="4" class="image-gallery">
+                <ion-card class="ion-no-padding ion-no-margin">
+                    <ion-img src="assets/images/teste4.jpg"></ion-img>
+                </ion-card>
+            </ion-col>
+
+            <ion-col size="4" class="image-gallery">
+                <ion-card class="ion-no-padding ion-no-margin">
+                    <ion-img src="assets/images/teste.jpg"></ion-img>
+                </ion-card>
+            </ion-col>
+
+            <ion-col size="4" class="image-gallery">
+                <ion-card class="ion-no-padding ion-no-margin">
+                    <ion-img src="assets/images/teste2.jpg"></ion-img>
+                </ion-card>
+            </ion-col>
+
+            <ion-col size="4" class="image-gallery">
+                <ion-card class="ion-no-padding ion-no-margin">
+                    <ion-img src="assets/images/teste3.jpg"></ion-img>
+                </ion-card>
+            </ion-col>
+
+            <ion-col size="4">
+                <ion-card class="ion-no-padding ion-no-margin">
+                    <ion-img src="assets/images/teste4.jpg"></ion-img>
+                </ion-card>
+            </ion-col>
+
+            <ion-col size="4">
+                <ion-card class="ion-no-padding ion-no-margin">
+                    <ion-img src="assets/images/teste.jpg"></ion-img>
+                </ion-card>
+            </ion-col>
+
+            <ion-col size="4">
+                <ion-card class="ion-no-padding ion-no-margin">
+                    <ion-img src="assets/images/teste4.jpg"></ion-img>
+                </ion-card>
+            </ion-col>
+
+            <ion-col size="4">
+                <ion-card class="ion-no-padding ion-no-margin">
+                    <ion-img src="assets/images/teste4.jpg"></ion-img>
+                </ion-card>
+            </ion-col>
+
+            <ion-col size="4">
+                <ion-card class="ion-no-padding ion-no-margin">
+                    <ion-img src="assets/images/teste3.jpg"></ion-img>
+                </ion-card>
+            </ion-col>
+
+            <ion-col size="4">
+                <ion-card class="ion-no-padding ion-no-margin">
+                    <ion-img src="assets/images/teste2.jpg"></ion-img>
+                </ion-card>
+            </ion-col>
+
+            <ion-col size="4">
+                <ion-card class="ion-no-padding ion-no-margin">
+                    <ion-img src="assets/images/teste2.jpg"></ion-img>
+                </ion-card>
+            </ion-col>
+
+            <ion-col size="4">
+                <ion-card class="ion-no-padding ion-no-margin">
+                    <ion-img src="assets/images/teste.jpg"></ion-img>
+                </ion-card>
+            </ion-col>
+
+            <ion-col size="4">
+                <ion-card class="ion-no-padding ion-no-margin">
+                    <ion-img src="assets/images/teste2.jpg"></ion-img>
+                </ion-card>
+            </ion-col>
+
+            <ion-col size="4">
+                <ion-card class="ion-no-padding ion-no-margin">
+                    <ion-img src="assets/images/teste4.jpg"></ion-img>
+                </ion-card>
+            </ion-col>
+
+            <ion-col size="4">
+                <ion-card class="ion-no-padding ion-no-margin">
+                    <ion-img src="assets/images/teste3.jpg"></ion-img>
+                </ion-card>
+            </ion-col>
+
+            <ion-col size="4">
+                <ion-card class="ion-no-padding ion-no-margin">
+                    <ion-img src="assets/images/teste.jpg"></ion-img>
+                </ion-card>
+            </ion-col>
+
+        </ion-row>
+    </ion-grid>
+
+</ion-content>

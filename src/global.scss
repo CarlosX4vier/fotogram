@@ -110,22 +110,17 @@
 }
 
 .input-pink {
-    // border: 1px solid rgba(183, 33, 255, 0.8);
-    // box-sizing: border-box;
-    // border-radius: 4px;
-    // margin-top: 4px;
-    // margin-bottom: 4px;
-    // height: 56px;
     --placeholder-color: #B721FF;
     --color: #B721FF;
     --placeholder-opacity: .8;
+    font-size: 16px;
 }
 
 .item-pink {
     border-radius: 4px;
     border: 1px solid rgba(183, 33, 255, 0.8);
     --background: transparent;
-    --padding-start: 15px;
+    --padding-start: 16px;
     margin-top: 10px;
     width: 100%;
 }
@@ -139,6 +134,10 @@
 
 
 /* MARGIN */
+
+.mt-32 {
+    margin-top: 32px;
+}
 
 .mt-56 {
     margin-top: 56px;

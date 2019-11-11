@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfileUserPage implements OnInit {
 
+  galleryType = 'regular';
   constructor() { }
 
   ngOnInit() {

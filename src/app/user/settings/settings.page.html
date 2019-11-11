@@ -8,7 +8,7 @@
 </ion-header>
 
 <ion-content>
-    <ion-item class="option" href="/invite" button="true" lines="none">
+    <ion-item class="option" routerLink="/invite" routerDirection="forward" button="true" lines="none">
         <ion-icon name="person-add"></ion-icon>
         <ion-label>Convidar amigos</ion-label>
     </ion-item>
@@ -25,7 +25,7 @@
 
     <ion-label class="title-session">Login</ion-label>
 
-    <ion-item class="close" button="true" lines="none">
+    <ion-item class="close" button="true" lines="none" routerLink="/login" routerDirection="back">
         <ion-label>Sair</ion-label>
     </ion-item>
 </ion-content>
